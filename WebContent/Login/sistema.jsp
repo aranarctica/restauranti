@@ -14,8 +14,7 @@ if(objeto == null){
 	
 }else{
 	
-	response.sendRedirect(// aqui va a donde esta dirigida la pagina
-			);
+	response.sendRedirect("Index.jsp");
 }
 
 %>
