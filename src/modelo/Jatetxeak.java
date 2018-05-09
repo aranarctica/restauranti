@@ -9,6 +9,24 @@ public class Jatetxeak {
 	private String Pais;
 	private int PremiosJ;
 	private String Precio;
+	private Cocinero cocinero;
+	private Premios premios;
+
+	public Cocinero getCocinero() {
+		return cocinero;
+	}
+
+	public void setCocinero(Cocinero cocinero) {
+		this.cocinero = cocinero;
+	}
+
+	public Premios getPremios() {
+		return premios;
+	}
+
+	public void setPremios(Premios premios) {
+		this.premios = premios;
+	}
 
 	public int getIdJatetxeak() {
 		return idJatetxeak;

@@ -5,8 +5,17 @@ public class Cocinero {
 	private int idCocinero;
 	private String Nombre;
 	private String Apellido;
-	private int Telefono;
+	private String Telefono;
 	private int LugarDeTrabajo;
+	private Premios premios;
+
+	public Premios getPremios() {
+		return premios;
+	}
+
+	public void setPremios(Premios premios) {
+		this.premios = premios;
+	}
 
 	public int getLugarDeTrabajo() {
 		return LugarDeTrabajo;
@@ -44,11 +53,11 @@ public class Cocinero {
 		Apellido = apellido;
 	}
 
-	public int getTelefono() {
+	public String getTelefono() {
 		return Telefono;
 	}
 
-	public void setTelefono(int telefono) {
+	public void setTelefono(String telefono) {
 		Telefono = telefono;
 	}
 

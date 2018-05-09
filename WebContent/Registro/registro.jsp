@@ -65,9 +65,6 @@
     <div class="collapse navbar-collapse" id="myNavbar">
       <ul class="nav navbar-nav">
         <li class="active"><a href="Index.jsp">Inicio</a></li>
-        <li><a href="gestores/restaurantes/gestorEsraurantes.html">Restaurantes</a></li>
-        <li><a href="gestores/cocineros/gestorCocineros.html">Cocineros</a></li>
-        <li><a href="gestores/Premios/gestorPremios.html">Premios</a></li>
         <li><a href="gestores/Login/login.jsp">Ingresar</a></li>
          <li><a href="Resgistro/resgistro.jsp">Registro</a></li>
       </ul>
@@ -82,7 +79,7 @@
     <div class="col-sm-8 text-left"> 
       
    
-          <h1> RESTAURANTI </h1>
+          <h1> REGISTRATE </h1>
     </div>
     
       

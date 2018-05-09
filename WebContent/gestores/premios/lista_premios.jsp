@@ -1,3 +1,18 @@
+<%@ page language="java" contentType="text/html; charset=ISO-8859-1"
+    pageEncoding="ISO-8859-1"%>
+   <%@ page import="modelo.*" %>
+   <%@ page import="java.util.ArrayList" %>
+   <%@ page import="java.util.Iterator" %>
+   
+   <%
+   		PremiosModelo premiosModelo = new PremiosModelo();
+   		ArrayList<Premios> premios = premiosModelo.selectAll();
+   		
+   		Iterator<Premios> i = premios.iterator();
+   		Premios premio;
+   %>
+
+
 <!DOCTYPE html>
 <html>
 <head>
@@ -23,6 +38,7 @@
 </head>
 <body>
 
+
 <nav class="navbar navbar-inverse">
   <div class="container-fluid">
     <div class="navbar-header">
@@ -42,31 +58,32 @@
      <li><a href="gestores/Premios/gestorPremios.html">Premios</a></li>
       </ul>
       <ul class="nav navbar-nav navbar-right">
-        <li><a href="#"><span class="glyphicon glyphicon-log-in"></span> Login</a></li>
+        <li><a href="#"><span class="glyphicon glyphicon-log-in"></span> Salir</a></li>
       </ul>
     </div>
   </div>
 </nav>
 
 
+<button type="button" class="navbar-toggle" data-toggle="collapse" data-target="añadirPre.jsp">Añadir Premio</button>
   
 <div class="container-fluid bg-3 text-center">    
-  <h3>Premios</h3><br>
+  <h3>Premios</h3><br>	
   <div class="row">
     <div class="col-sm-3">
-      <p>Some text..</p>
+      <p></p>
       <img src="https://placehold.it/150x80?text=IMAGE" class="img-responsive" style="width:100%" alt="Image">
     </div>
     <div class="col-sm-3"> 
-      <p>Some text..</p>
+      <p></p>
       <img src="https://placehold.it/150x80?text=IMAGE" class="img-responsive" style="width:100%" alt="Image">
     </div>
     <div class="col-sm-3"> 
-      <p>Some text..</p>
+      <p></p>
       <img src="https://placehold.it/150x80?text=IMAGE" class="img-responsive" style="width:100%" alt="Image">
     </div>
     <div class="col-sm-3">
-      <p>Some text..</p>
+      <p></p>
       <img src="https://placehold.it/150x80?text=IMAGE" class="img-responsive" style="width:100%" alt="Image">
     </div>
   </div>
@@ -75,19 +92,19 @@
 <div class="container-fluid bg-3 text-center">    
   <div class="row">
     <div class="col-sm-3">
-      <p>Some text..</p>
+      <p></p>
       <img src="https://placehold.it/150x80?text=IMAGE" class="img-responsive" style="width:100%" alt="Image">
     </div>
     <div class="col-sm-3"> 
-      <p>Some text..</p>
+      <p></p>
       <img src="https://placehold.it/150x80?text=IMAGE" class="img-responsive" style="width:100%" alt="Image">
     </div>
     <div class="col-sm-3"> 
-      <p>Some text..</p>
+      <p></p>
       <img src="https://placehold.it/150x80?text=IMAGE" class="img-responsive" style="width:100%" alt="Image">
     </div>
     <div class="col-sm-3">
-      <p>Some text..</p>
+      <p></p>
       <img src="https://placehold.it/150x80?text=IMAGE" class="img-responsive" style="width:100%" alt="Image">
     </div>
   </div>

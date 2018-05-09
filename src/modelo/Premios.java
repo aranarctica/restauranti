@@ -5,7 +5,7 @@ public class Premios {
 	private int idPremios;
 	private String Nombre;
 	private String Descripcion;
-	private int PremioMetalico;
+	private String PremioMetalico;
 
 	public int getIdPremios() {
 		return idPremios;
@@ -31,11 +31,11 @@ public class Premios {
 		Descripcion = descripcion;
 	}
 
-	public int getPremioMetalico() {
+	public String getPremioMetalico() {
 		return PremioMetalico;
 	}
 
-	public void setPremioMetalico(int premioMetalico) {
+	public void setPremioMetalico(String premioMetalico) {
 		PremioMetalico = premioMetalico;
 	}
 

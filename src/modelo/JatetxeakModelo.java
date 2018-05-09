@@ -6,20 +6,22 @@ import java.sql.SQLException;
 import java.sql.Statement;
 import java.util.ArrayList;
 
-import Libros.Libro;
-
 public class JatetxeakModelo extends Conector {
 
 	public ArrayList<Jatetxeak> selectAll() {
 
 		ArrayList<Jatetxeak> jatetxeak = new ArrayList<Jatetxeak>();
-
+		CocineroModelo cocineroModelo = new CocineroModelo();
+		PremiosModelo premiosModelo = new PremiosModelo();
+			
 		try {
 			Statement st = super.conexion.createStatement();
 			ResultSet rs = st.executeQuery("select * from jatetxeak");
 			while (rs.next()) {
 				Jatetxeak jatetxe = new Jatetxeak();
 				jatetxe.setIdJatetxeak(rs.getInt("idJatetxeak"));
+				jatetxe.setCocinero(cocineroModelo.select(rs.getInt("idCocinero")));
+				jatetxe.setPremios(premiosModelo.select(rs.getInt("idPremios")));
 				jatetxe.setNombre(rs.getString("Nombre"));
 				jatetxe.setDireccion(rs.getString("Direccion"));
 				jatetxe.setIdCocinero(rs.getInt("idCocinero"));

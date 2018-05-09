@@ -20,7 +20,7 @@ public class PremiosModelo extends Conector {
 				premio.setIdPremios(rs.getInt("IdPremios"));
 				premio.setNombre(rs.getString("Nombre"));
 				premio.setDescripcion(rs.getString("Descripcion"));
-				premio.setPremioMetalico(rs.getInt("PremioMetalico"));
+				premio.setPremioMetalico(rs.getString("PremioMetalico"));
 
 				premios.add(premio);
 			}
@@ -44,7 +44,7 @@ public class PremiosModelo extends Conector {
 				premio.setIdPremios(rs.getInt("IdPremios"));
 				premio.setNombre(rs.getString("Nombre"));
 				premio.setDescripcion(rs.getString("Descripcion"));
-				premio.setPremioMetalico(rs.getInt("PremioMetalico"));
+				premio.setPremioMetalico(rs.getString("PremioMetalico"));
 				return premio;
 			}
 
@@ -60,7 +60,7 @@ public class PremiosModelo extends Conector {
 					"INSERT INTO premios (Nombre, Descripcion, PremioMetalico ) values(?,?,?)");
 			pst.setString(1, premio.getNombre());
 			pst.setString(2, premio.getDescripcion());
-			pst.setInt(3, premio.getPremioMetalico());
+			pst.setString(3, premio.getPremioMetalico());
 			
 
 			pst.execute();

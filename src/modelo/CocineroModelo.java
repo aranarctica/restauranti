@@ -11,16 +11,17 @@ public class CocineroModelo extends Conector {
 	public ArrayList<Cocinero> selectAll() {
 
 		ArrayList<Cocinero> cocinero = new ArrayList<Cocinero>();
-
+		PremiosModelo premiosModelo = new PremiosModelo();
 		try {
 			Statement st = super.conexion.createStatement();
 			ResultSet rs = st.executeQuery("select * from cocinero");
 			while (rs.next()) {
 				Cocinero cocineros = new Cocinero();
-				cocineros.setIdCocinero(rs.getInt("IdCocinero"));
+				cocineros.setIdCocinero(rs.getInt("idCocinero"));
+				cocineros.setPremios(premiosModelo.select(rs.getInt("idPremios")));
 				cocineros.setNombre(rs.getString("Nombre"));
 				cocineros.setApellido(rs.getString("Apellido"));
-				cocineros.setTelefono(rs.getInt("Telefono"));
+				cocineros.setTelefono(rs.getString("Telefono"));
 				cocineros.setLugarDeTrabajo(rs.getInt("LugarDeTrabajo"));
 				cocineros.setExperiencia(rs.getInt("Experiencia"));
 				cocineros.setEdad(rs.getInt("Edad"));
@@ -45,10 +46,10 @@ public class CocineroModelo extends Conector {
 			if (rs.next()) {
 				Cocinero cocineros = new Cocinero();
 
-				cocineros.setIdCocinero(rs.getInt("IdCocinero"));
+				cocineros.setIdCocinero(rs.getInt("idCocinero"));
 				cocineros.setNombre(rs.getString("Nombre"));
 				cocineros.setApellido(rs.getString("Apellido"));
-				cocineros.setTelefono(rs.getInt("Telefono"));
+				cocineros.setTelefono(rs.getString("Telefono"));
 				cocineros.setLugarDeTrabajo(rs.getInt("LugarDeTrabajo"));
 				cocineros.setExperiencia(rs.getInt("Experiencia"));
 				cocineros.setEdad(rs.getInt("Edad"));
@@ -69,7 +70,7 @@ public class CocineroModelo extends Conector {
 					"INSERT INTO cocinero (Nombre, Apellido, Telefono) values(?,?,?)");
 			pst.setString(1, cocinero.getNombre());
 			pst.setString(2, cocinero.getApellido());
-			pst.setInt(3, cocinero.getTelefono());
+			pst.setString(3, cocinero.getTelefono());
 			
 
 			pst.execute();
@@ -88,7 +89,7 @@ public class CocineroModelo extends Conector {
 			pst = super.conexion.prepareStatement("update cocinero set Nombre=?, Apellido=?, Telefono=? where idCocinero=?");
 			pst.setString(1, cocinero.getNombre());
 			pst.setString(2, cocinero.getApellido());
-			pst.setInt(3, cocinero.getTelefono());
+			pst.setString(3, cocinero.getTelefono());
 			pst.setInt(4, cocinero.getIdCocinero());
 			
 			pst.executeUpdate();
